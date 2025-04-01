@@ -1,5 +1,9 @@
 const container = document.querySelector(".container");
 
+function ask() {
+    alert("hi");
+}
+
 function addSquare(line) {
     const square = document.createElement("div");
     square.addEventListener("mouseenter", (e) => {

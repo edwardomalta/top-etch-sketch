@@ -8,10 +8,17 @@ function addSquare(line) {
 
 function createLine(){
     const line = document.createElement("div");
+    line.classList.add("line");
     for (let i = 0; i < 16; i++) {
         addSquare(line);
     }
     container.appendChild(line);
 }
 
-createLine();
+function renderLines() {
+    for(let i = 0; i < 16; i++) {
+        createLine();
+    }
+}
+
+renderLines();

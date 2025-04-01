@@ -2,6 +2,10 @@ const container = document.querySelector(".container");
 
 function addSquare(line) {
     const square = document.createElement("div");
+    square.addEventListener("mouseenter", (e) => {
+        const sqr = e.target;
+        sqr.style.backgroundColor = "blue";
+    });
     square.classList.add("square");
     line.appendChild(square);
 }

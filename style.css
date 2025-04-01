@@ -1,3 +1,9 @@
 .container {
     border: black solid 2px;
 }
+
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}

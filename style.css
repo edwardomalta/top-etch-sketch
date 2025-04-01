@@ -7,9 +7,12 @@
     flex-direction: column;
 }
 
+button {
+    font-size: large;
+    background-color: blueviolet;
+}
+
 .square {
-    /* width: 10px; */
-    /* height: 10px; */
     background-color: red;
     flex-grow: 1;
 }

@@ -1,7 +1,11 @@
 const container = document.querySelector(".container");
+let SQUARES_PER_SIDE = 16;
 
 function ask() {
-    alert("hi");
+    let number_of_squares = prompt("How much squares: ", 16)
+    if (number_of_squares > 100 ) number_of_squares = 100;
+    SQUARES_PER_SIDE = number_of_squares;
+    renderLines();
 }
 
 function addSquare(line) {
@@ -17,14 +21,21 @@ function addSquare(line) {
 function createLine(){
     const line = document.createElement("div");
     line.classList.add("line");
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < SQUARES_PER_SIDE; i++) {
         addSquare(line);
     }
     container.appendChild(line);
 }
 
+function clearContainer() {
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
+}
+
 function renderLines() {
-    for(let i = 0; i < 16; i++) {
+    clearContainer();
+    for(let i = 0; i < SQUARES_PER_SIDE; i++) {
         createLine();
     }
 }

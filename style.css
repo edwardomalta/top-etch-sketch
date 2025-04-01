@@ -1,5 +1,6 @@
 .container {
     border: black solid 2px;
+    padding: 8px;
 }
 
 .square {
@@ -10,4 +11,5 @@
 
 .line {
     display: flex;
+    justify-content: center;
 }
